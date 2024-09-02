@@ -39,7 +39,8 @@ public class SetTest {
         assertTrue(numbers.contains(num));
     }
     // 이 경우 contains의 결과가 true인 경우에만 테스트 가능함!
-
+    
+    //ParameterTest의 경우에도 false,true 모두 테스트
     @DisplayName("contain 메소드 테스트 보완")
     @ParameterizedTest
     @CsvSource( value={"1:true","2:true","10:true"},delimiter=':')
