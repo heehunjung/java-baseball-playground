@@ -19,4 +19,12 @@ public class StringTest {
         String[] splited = actual.split(",");
         assertThat(splited).containsExactly("1","2");
     }
+
+    @Test
+    void substringTest1(){
+        String actual = "(1,2)";
+        String substring = actual.substring(1,4);
+        assertThat(substring).isEqualTo("1,2");
+    }
+
 }
