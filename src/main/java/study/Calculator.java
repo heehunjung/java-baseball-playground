@@ -1,24 +1,38 @@
 package study;
 
+import java.util.Scanner;
+
 public class Calculator {
-    public int add(int i, int j) {
-        return i + j;
+
+    public static int calculator(String line) {
+        String[] inputs = line.split(" ");
+        int result = Integer.parseInt(inputs[0]);
+        int operand = 0;
+        String operator = null;
+        for (int i = 1; i < inputs.length; i++) {
+            if ( i % 2 != 0) {
+                operator = inputs[i];
+                continue;
+            }
+            operand = Integer.parseInt(inputs[i]);
+            result = calculate(result, operand, operator);
+        }
+        return result;
     }
-    public int subtract(int i, int j) {
-        return i-j;
+    public static int calculate(int a, int b, String op) {
+        if (op.equals("+")) {
+            return a + b;
+        }
+        if (op.equals("-")) {
+            return a - b;
+        }
+        if (op.equals("*")) {
+            return a * b;
+        }
+        if (op.equals("/")) {
+            return a/b;
+        }
+        return -9999;
     }
-    public int multiply(int i, int j) {
-        return i*j;
-    }
-    public int divide(int i, int j) {
-        return i/j;
-    }
-//    // Test 용도의 main method
-//    public static void main(String[] args) {
-//        Calculator cal = new Calculator();
-//        System.out.println(cal.add(1,2));
-//        System.out.println(cal.subtract(2,3));
-//        System.out.println(cal.multiply(2,3));
-//        System.out.println(cal.divide(2,3));
-//    }
+
 }
