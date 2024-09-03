@@ -33,7 +33,7 @@ public class StringTest {
     // assertThatThrownBy 2가지 방법
     // Containing
     // Matching
-    @DisplayName("OutOfBoundsException")
+    @DisplayName("한국어 테스트")
     @Test
     void charAtTest() {
 //        assertThatThrownBy(()->{
@@ -47,4 +47,5 @@ public class StringTest {
                     String charAt = actual.charAt(5) + "";
                 }).withMessageMatching("String index out of range: 5");
     }
+
 }

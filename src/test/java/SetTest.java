@@ -1,4 +1,3 @@
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,19 +31,26 @@ public class SetTest {
         assertThat(numbers.size()).isEqualTo(3);
     }
 
+    //한 메소드를 여러 값으로 테스트하고 싶을 때 ParameterizedTest
     @DisplayName("Contain 메소드 테스트")
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3})
     void containsTest(int num) {
         assertTrue(numbers.contains(num));
     }
-    // 이 경우 contains의 결과가 true인 경우에만 테스트 가능함!
+
     
     //ParameterTest의 경우에도 false,true 모두 테스트
     @DisplayName("contain 메소드 테스트 보완")
     @ParameterizedTest
-    @CsvSource( value={"1:true","2:true","10:true"},delimiter=':')
+    @CsvSource( value={"1:true","2:true","10:false"},delimiter=':')
     void advancedContainsTest(int num,boolean expected) {
         assertEquals(expected, numbers.contains(num));
+    }
+
+    @Test
+    void practice() {
+        assertThat(1)
+                .isIn(numbers);
     }
 }
