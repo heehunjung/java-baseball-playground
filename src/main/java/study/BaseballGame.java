@@ -5,6 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BaseballGame {
+
+    /*   상수 분리   */
+    public static final int MIN_NO = 1;
+    public static final int MAX_NO = 9;
+
     public static void InputView() {
         System.out.print("숫자를 입력해 주세요 : ");
     }
@@ -15,7 +20,7 @@ public class BaseballGame {
             return true;
         }
         if (result[1]!=0) {
-            System.out.print(result[1]+"볼");
+            System.out.print(result[MIN_NO]+"볼");
         }
         if (result[0]!=0) {
             System.out.print(result[0]+"스트라이크");
@@ -23,11 +28,12 @@ public class BaseballGame {
         System.out.println();
         return false;
     }
-    public static boolean EndGame(){
-        Scanner scanner = new Scanner(System.in);
+
+    public static boolean EndGame(Scanner scanner){
         int input = scanner.nextInt();
-        return input == 1;
+        return input == MIN_NO;
     }
+
     public static int[] CompareNumber(String random, String userNumber) {
         String[] randoms = random.split("");
         String[] userNumbers = userNumber.split("");
@@ -63,7 +69,6 @@ public class BaseballGame {
         return sameNumber;
     }
 
-
     public static String RandomNumber(Random random) {
         // 100부터 999 사이의 랜덤한 정수를 반환 (3자리 숫자)
         return String.valueOf(random.nextInt(900) + 100);
@@ -80,9 +85,11 @@ public class BaseballGame {
             int[] result = new int[2];
             result = CompareNumber(userChoice, randomNumber);
             if (ResultView(result)){
-                game = EndGame();
+                game = EndGame(sc);
                 randomNumber = RandomNumber(random);
             }
         }
     }
+
+
 }

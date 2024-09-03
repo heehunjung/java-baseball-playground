@@ -29,7 +29,7 @@ public class BaseballGameTest {
         assertThat(result).containsExactly(1, 2); // 배열의 내용을 직접 비교
     }
 
-    // 사용자의 input이 있는 메소드의 테스트는 어떻게 ?
+    /* 사용자의 input이 있는 메소드의 테스트는 어떻게 ? */
 
     @DisplayName("ResultView 테스트")
     @Test
@@ -39,12 +39,18 @@ public class BaseballGameTest {
         result[1] = 0;
         assertThat(ResultView(result)).isEqualTo(true);
     }
+
     @DisplayName("RandomNumber 테스트")
     @Test
     void RandomNumberTest() {
         Random random = new Random();
+
+        /* 중복된 값이 있는지 검증 로직 추가 */
+
         String first = RandomNumber(random);
         String second = RandomNumber(random);
         assertThat(first).isNotEqualTo(second);
     }
+
+
 }
