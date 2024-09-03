@@ -28,10 +28,16 @@ public class BaseballGameTest {
         int[] result = CompareNumber("123", "321");
         assertThat(result).containsExactly(1, 2); // 배열의 내용을 직접 비교
     }
+
+    // 사용자의 input이 있는 메소드의 테스트는 어떻게 ?
+
     @DisplayName("ResultView 테스트")
     @Test
     void ResultViewTest() {
-
+        int[] result = new int[2];
+        result[0] = 3;
+        result[1] = 0;
+        assertThat(ResultView(result)).isEqualTo(true);
     }
     @DisplayName("RandomNumber 테스트")
     @Test
