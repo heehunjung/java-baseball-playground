@@ -20,7 +20,7 @@ public class BaseballGame {
         if (result[0]!=0) {
             System.out.print(result[0]+"스트라이크");
         }
-        System.out.println("");
+        System.out.println();
         return false;
     }
     public static boolean EndGame(){
@@ -81,6 +81,7 @@ public class BaseballGame {
             result = CompareNumber(userChoice, randomNumber);
             if (ResultView(result)){
                 game = EndGame();
+                randomNumber = RandomNumber(random);
             }
         }
     }
