@@ -1,4 +1,4 @@
-package study.baseballGame.validationUtil;
+package study.baseballGame.utils;
 
 public class Validation {
     public static final int MIN_NO = 0;

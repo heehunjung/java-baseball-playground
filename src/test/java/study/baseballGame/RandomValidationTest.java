@@ -2,7 +2,7 @@ package study.baseballGame;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import study.baseballGame.validationUtil.Validation;
+import study.baseballGame.utils.Validation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
