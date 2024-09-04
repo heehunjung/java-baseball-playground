@@ -33,12 +33,10 @@ public class RandomNoGenerateTest {
     @DisplayName("램덤_숫자_생성")
     @Test
     void randomNoGenerateTest() {
-        String randomNo = Generate.generateNumber(rand);
-        System.out.println("randomNo = " + randomNo);
-        String[] splitNo = randomNo.split("");
-        assertThat(randomNo.length()).isEqualTo(3);
-        assertThat(splitNo[0]).isNotEqualTo(splitNo[1]);
-        assertThat(splitNo[1]).isNotEqualTo(splitNo[2]);
-        assertThat(splitNo[0]).isNotEqualTo(splitNo[2]);
+        ArrayList<Integer> randomNo = Generate.generateNumber(rand);
+        assertThat(randomNo.size()).isEqualTo(3);
+        assertThat(randomNo.get(0)).isNotEqualTo(randomNo.get(1));
+        assertThat(randomNo.get(1)).isNotEqualTo(randomNo.get(2));
+        assertThat(randomNo.get(0)).isNotEqualTo(randomNo.get(2));
     }
 }
