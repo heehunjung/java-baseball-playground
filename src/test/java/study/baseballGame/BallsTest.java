@@ -20,6 +20,5 @@ public class BallsTest {
         Balls balls = new Balls(userInput);
         assertThat(balls.play(randomInput)).isEqualTo(Arrays.asList(BallStatus.STRIKE));
         assertThat(balls.play(randomInput2)).isEqualTo(Arrays.asList(BallStatus.STRIKE,BallStatus.STRIKE,BallStatus.STRIKE));
-
     }
 }

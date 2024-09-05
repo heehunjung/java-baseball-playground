@@ -14,9 +14,14 @@ ArrayList<Integer>로 변경
 -> Enum 추가 STRIKE,BALL,NOTHING
 
 4. 공 비교 심화
-Ball 객체를 엔티티를 가지고 있는 Balls 클래스 ?
-ArrayList를 Balls 엔티티 -> 이 방식이 나을듯, 위 방식은 입력을 
+a. Ball 객체를 엔티티를 가지고 있는 Balls 클래스 ?
+b. ArrayList 를 Balls 엔티티 -> 이 방식이 나을듯, 위 방식은 입력을 
 ball 객체로 다 따로 만들어줘야해서 별로인듯
-
+-> 하다 보니 a 방식으로 진행
+ball.play 를 사용하기 위해
 0 1 3 | 2 5 6 
 공 1개마다 ball.play()로 비교
+
+5. 볼-스트라이크 판정 
+스트라이크 3개 -> 정답
+그 외 경우 -> 오답 

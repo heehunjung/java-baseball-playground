@@ -10,7 +10,7 @@ public class RandomValidationTest {
     @DisplayName("랜덤_넘버_테스트")
     @Test
     void 랜덤_넘버_테스트(){
-        assertThat(Validation.RandomValidator(9)).isTrue();
-        assertThat(Validation.RandomValidator(1)).isTrue();
+        assertThat(Validation.randomValidator(9)).isTrue();
+        assertThat(Validation.randomValidator(1)).isTrue();
     }
 }
