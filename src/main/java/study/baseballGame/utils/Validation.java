@@ -9,7 +9,7 @@ public class Validation {
     public static final int MAX_NO = 10;
 
     public static boolean randomValidator(int no) {
-        return MIN_NO< no && no < MAX_NO;
+        return MIN_NO < no && no < MAX_NO;
     }
 
     public static boolean resultValidation(ArrayList<BallStatus> results) {

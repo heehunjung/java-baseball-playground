@@ -19,7 +19,7 @@ public class Generate {
             list.add(no);
             return;
         }
-        if(!list.contains(no)){
+        if(!list.contains(no) && Validation.randomValidator(no)){
             list.add(no);
         }
     }
