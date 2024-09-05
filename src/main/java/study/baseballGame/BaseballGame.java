@@ -21,15 +21,23 @@ public class BaseballGame {
         while (true) {
             InputView.print();
             ArrayList<Integer> userInput = InputView.input(sc);
+
             Balls userBall = new Balls(userInput);
-            if (!Validation.resultValidation(userBall.play(randomNumbers))){
-                ResultView.print(userBall.play(randomNumbers));
+            ArrayList<BallStatus> result = userBall.play(randomNumbers);
+
+            PlayResult playResult = new PlayResult();
+            playResult.generateResult(result);
+
+            if (!playResult.isGameOver()){
+                ResultView.print(playResult);
                 System.out.println();
                 continue;
             }
+
             ResultView.print();
             if (ResultView.input(sc) == 2)
                 break;
+
             randomNumbers = Generate.generateNumber(rand);
             System.out.println("randomNumbers = " + randomNumbers);
 

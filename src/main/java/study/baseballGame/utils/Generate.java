@@ -1,13 +1,17 @@
 package study.baseballGame.utils;
 
+import study.baseballGame.BallStatus;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Generate {
 
+    public static final int MAX_SIZE = 3;
+
     public static ArrayList<Integer> generateNumber(Random r) {
         ArrayList<Integer> list = new ArrayList<>();
-        while (list.size() < 3) {
+        while (list.size() < MAX_SIZE) {
             int no = r.nextInt(10);
             insertNo(no,list);
         }
@@ -23,4 +27,5 @@ public class Generate {
             list.add(no);
         }
     }
+
 }

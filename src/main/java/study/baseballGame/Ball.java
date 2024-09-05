@@ -18,4 +18,5 @@ public class Ball {
             return BallStatus.BALL;
         return BallStatus.NOTHING;
     }
+
 }

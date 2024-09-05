@@ -11,13 +11,14 @@ public class InputView {
     public static void print() {
         System.out.print(inputWord);
     }
+
     public static ArrayList<Integer> input(Scanner sc) {
         ArrayList<Integer> list = new ArrayList<>();
-        int number = sc.nextInt();    // 숫자를 문자열로 변환한 후, 각 문자를 하나씩 ArrayList에 추가
+
+        int number = sc.nextInt();
         String numberStr = Integer.toString(number);
         
-        //3자리 아니면 에러 로직
-        
+
         // 각 자리를 배열에 넣기
         for (int i = 0; i < BALL_NO; i++) {
             int digit = Character.getNumericValue(numberStr.charAt(i));
