@@ -12,4 +12,11 @@
 -> 2번 리팩토링 기존처럼 string 으로 ball 을 받을 이유가 없어짐
 ArrayList<Integer>로 변경
 -> Enum 추가 STRIKE,BALL,NOTHING
-4.
+
+4. 공 비교 심화
+Ball 객체를 엔티티를 가지고 있는 Balls 클래스 ?
+ArrayList를 Balls 엔티티 -> 이 방식이 나을듯, 위 방식은 입력을 
+ball 객체로 다 따로 만들어줘야해서 별로인듯
+
+0 1 3 | 2 5 6 
+공 1개마다 ball.play()로 비교

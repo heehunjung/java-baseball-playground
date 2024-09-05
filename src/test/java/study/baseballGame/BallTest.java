@@ -10,7 +10,7 @@ import java.util.Arrays;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BallTest {
-    @DisplayName("볼_스트라이크_검증")
+    @DisplayName("공_1개_볼_스트라이크_검증")
     @Test
     void playTest() {
         Ball ball =  new Ball(4,1);
