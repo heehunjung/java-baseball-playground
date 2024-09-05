@@ -1,37 +1,26 @@
-1. 랜덤 넘버 validation
-1 - 9까지의 숫자만 허용
+## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
-2. 랜덤 넘버 generate
-흠.. 1번에서 만든 메소드랑 엮어서 ?
-그럼 클래스를 분리 할 이유가 있나?
+---
+## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
 
-3. 공 비교 테스트
-공 객체를 생성 -> 필요한 필드 : number, location
-공 1개 당 ball,strike 판정함 -> 비교 대상은  0 0 0
-볼 클래스, 비교 대상 볼 3개
--> 2번 리팩토링 기존처럼 string 으로 ball 을 받을 이유가 없어짐
-ArrayList<Integer>로 변경
--> Enum 추가 STRIKE,BALL,NOTHING
+---
+1. 피드백 강의 전까지 미션 진행 
+> 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
+> 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
 
-4. 공 비교 심화
-a. Ball 객체를 엔티티를 가지고 있는 Balls 클래스 ?
-b. ArrayList 를 Balls 엔티티 -> 이 방식이 나을듯, 위 방식은 입력을 
-ball 객체로 다 따로 만들어줘야해서 별로인듯
--> 하다 보니 a 방식으로 진행
-ball.play 를 사용하기 위해
-0 1 3 | 2 5 6 
-공 1개마다 ball.play()로 비교
+![mission baseball](https://raw.githubusercontent.com/next-step/nextstep-docs/master/playground/images/mission_baseball.png)
 
-5. 볼-스트라이크 판정 
-스트라이크 3개 -> 정답
-그 외 경우 -> 오답 
+---
+2. 피드백 앞 단계까지 미션 구현을 완료한 후 피드백 강의를 학습한다.
 
+---
+3. Git 브랜치를 master 또는 main으로 변경한 후 피드백을 반영하기 위한 새로운 브랜치를 생성한 후 처음부터 다시 미션 구현을 도전한다.
 
------------------------------------------------------------
-다 끝내고 생각
-NOTHING ENUM 안썼네
-테스트 코드 단위로 짜다보니깐 메인으로 합칠때 편하다
-1. 객체 값에 직접 접근하고 있었음 -> 객체에 메세지를 보낸다고 생각
-2. 결과를 ResultView 에서 불완전한 result 리스트를 처리해서 출력중
-  2-1. result 객체를 만들어서 저 데이터를 처리해주자 
-3. 
+```
+git branch -a // 모든 로컬 브랜치 확인
+git checkout master // 기본 브랜치가 master인 경우
+git checkout main // 기본 브랜치가 main인 경우
+
+git checkout -b 브랜치이름
+ex) git checkout -b apply-feedback
+```
